@@ -4,7 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 /*
 |--------------------------------------------------------------------------
 | Base Site URL
-|--------------------------------------------------------------------------
+|---------------------------------------------------------  -----------------
 |
 | URL to your CodeIgniter root. Typically this will be your base URL,
 | WITH a trailing slash:
@@ -23,7 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost:8080/timeline/';
+$config['base_url'] = 'http://localhost/timeline/';
 
 /*
 |--------------------------------------------------------------------------

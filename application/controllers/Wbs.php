@@ -10,6 +10,7 @@ class Wbs extends CI_Controller
 		parent::__construct();
 		$this->load->model('Wbs_model');
 		$this->load->model('User_model');
+		$this->load->model('Penugasan_model');
 		if ($this->session->userdata('logged_in') == false) {
 			redirect('welcome');
 		}
@@ -68,8 +69,16 @@ class Wbs extends CI_Controller
 	{
 		$data['title'] = 'Tambah wbs';
 		$data['primary_view'] = 'wbs/create_wbs';
+		$data['penugasan'] = $this->Penugasan_model->getList();
 		$this->load->view('v_template', $data);
 	}
+	public function createtim()
+	{
+		$data['title'] = 'Tambah Tim WBS';
+		$data['primary_view'] = 'wbs/create_timwbs';
+		$this->load->view('v_template', $data);
+	}
+
 
 	public function update()
 	{
@@ -128,6 +137,14 @@ public function submits()
 		} 
 	}
 }
+	public function tim()
+	{
+		$data['title'] = 'Wbs';
+		$data['primary_view'] = 'wbs/v_timwbs';
+		$data['total'] = $this->Wbs_model->getCount();
+		$data['list'] = $this->Wbs_model->getTimList();
+		$this->load->view('v_template', $data);
+	}
 
 	public function delete()
 	{

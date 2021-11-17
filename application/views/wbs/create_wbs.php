@@ -32,11 +32,17 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >Nama Pekerjaan
-                                    </label>
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama Pekerjaan</label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="nama_pekerjaan" class="form-control col-md-7 col-xs-12">
-                                    </div>
+                                    <select name="nama_pekerjaan" class="form-control col-md-3 col-sm-3 col-xs-12">
+                                        <option value="" >Pilih Nama Pekerjaan</option>
+                                       
+                                        <?php foreach ($penugasan as $pngsn) : ?>
+                                            <option value="<?php echo $pngsn->NAMA_PEKERJAAN ?>"><?php echo $pngsn->NAMA_PEKERJAAN ?></option>
+                                        <?php endforeach; ?>
+                                    
+                                    </select>
+                                        </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" >PIC

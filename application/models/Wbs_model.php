@@ -29,6 +29,10 @@ class Wbs_model extends CI_Model
 		return $query = $this->db->order_by('web_code', 'ASC')->get('wbs')->result();
 		return $query = $this->db->order_by('web_code', 'ASC')->get('pwbs')->result();
 	}
+	public function getTimList()
+	{
+		return $query = $this->db->order_by('id_tim', 'ASC')->get('timwbs')->result();
+	}
 
 	public function update()
 	{
@@ -53,16 +57,38 @@ class Wbs_model extends CI_Model
 	{
 		return $this->db->count_all('wbs');
 	}
+	public function getCountTim()
+	{
+		return $this->db->count_all('timwbs');
+	}
 
 	public function getDetail($id)
 	{
 		return $this->db->where('WEB_CODE', $id)->get('wbs')->row();
 	}
 
+	public function getDetailTim($id)
+	{
+		return $this->db->where('ID_TIM', $id)->get('timwbs')->row();
+	}
+
 	public function checkAvailability($id)
 	{
 		$query = $this->db->where('WEB_CODE', $id)->get('wbs');
 		if ($query->num_rows() > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	public function tim()
+	{
+		$data = array(
+			'NAMA'	=> $this->input->post('nama'),
+		);
+
+		$this->db->insert('timwbs', $data);
+		if ($this->db->affected_rows() > 0) {
 			return true;
 		} else {
 			return false;

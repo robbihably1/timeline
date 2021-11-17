@@ -1,7 +1,7 @@
 <div class="">
     <div class="page-title" style="padding: 8px">
         <div class="title_left">
-            <h1><i class="fa fa-tasks"></i> Tambah Data Penugasan</h1>
+            <h1><i class="fa fa-tasks"></i> Tambah Penugasan    </h1>
         </div>
     </div>
     <div class="clearfix"></div>

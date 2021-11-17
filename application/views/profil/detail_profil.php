@@ -3,7 +3,7 @@
 	<div class="col-lg-5 col-md-5 col-xs-12">
 		<img style="max-height: 300px;max-width: 250px" src="<?php echo base_url() ?>assets/images/upload/profile/<?php echo $detail->PHOTO ?>">
 	</div>
-	<div class="col-lg-7 col-md-7 col-xs-12">
+    <div class="col-lg-7 col-md-7 col-xs-12">
 		<label>Nama Lengkap</label>
         <p>&emsp;&nbsp;<?php echo $detail->FULLNAME ?></p>
 		<label>Username</label>
@@ -16,7 +16,7 @@
         <p>&emsp;&nbsp;<?php echo $tl ?></p>
         <label>Alamat</label>
         <?php if($detail->ALAMAT == null){$lm='<i>BELUM DIISI</i>';}else{$lm=$detail->ALAMAT;} ?>
-        <p>&emsp;&nbsp;<?php echo $lm ?></p>
+        <p>&emsp;&nbsp;<?php echo $lm ?></p><br>
         <a href="<?php echo base_url() ?>profil/update?change_key=<?php echo $detail->ID_ADMIN ?>&signup=0" class="btn btn-success pull-right"><i class="fa fa-edit"></i>  Edit</a>
 	</div>
 </div>
