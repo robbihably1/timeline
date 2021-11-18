@@ -35,13 +35,6 @@
                             <form method="post" action="<?php echo base_url() ?>wbs/submits" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" autocomplete= "off" >
                                 <input type="hidden" name="id" value="<?php echo $detail->WEB_CODE ?>">
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >Nama Pekerjaan
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="nama_pekerjaan" class="form-control col-md-7 col-xs-12" value="<?php echo $detail->NAMA_PEKERJAAN?>">
-                                    </div>
-                                </div>
-                                <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" >PIC
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -63,22 +56,33 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >Durasi
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >Durasi (Jam)
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                         <input type="integer" name="durasi" id="durasi" class="form-control col-md-7 col-xs-12" value="<?php echo $detail->DURASI ?>">
                                     </div>
                                 </div>
-                             
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama Pekerjaan</label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select name="nama_pekerjaan" class="form-control col-md-3 col-sm-3 col-xs-12">
+                                        <option value="" >Pilih Nama Pekerjaan</option>
+                                       
+                                        <?php foreach ($penugasan as $pngsn) : ?>
+                                            <option value="<?php echo $pngsn->NAMA_PEKERJAAN ?>"><?php echo $pngsn->NAMA_PEKERJAAN ?></option>
+                                        <?php endforeach; ?>
+                                    
+                                    </select>
+                                    </div>
+                                </div>
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" >Uraian Kegiatan
                                     </label>    
                                     <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <textarea type="text" name="uraian_kegiatan" class="form-control col-md-7 col-xs-12" id="uraian_kegiatan" rows="3" ></textarea>
+                                        <!-- <input type="text" name="uraian_kegiatan" id="uraian_kegiatan" class="form-control col-md-7 col-xs-12" value="<?php echo $detail->URAIAN_KEGIATAN?>">   -->
+                                        <textarea type="text" name="uraian_kegiatan" id="uraian_kegiatan" class="form-control col-md-7 col-xs-12" value="<?php echo $detail->URAIAN_KEGIATAN?>"></textarea>
                                     </div>
                                 </div>
-                              
-      
                                 <div class="ln_solid"></div>
                                 <div class="form-group">
                                     <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">

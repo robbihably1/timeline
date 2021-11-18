@@ -24,21 +24,40 @@
                             <?php endif; ?>
                         <?php endif; ?>
                             <form method="post" action="<?php echo base_url() ?>timwbs/submit" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama Tim</label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                <select name="nama_tim" class="form-control col-md-3 col-sm-3 col-xs-12">
+                                    <option value="" >Pilih Nama Tim</option>
+                                    <?php foreach ($user as $usr) : ?>
+                                        <option value="<?php echo $usr->FULLNAME?>"><?php echo $usr->FULLNAME?></option>
+                                    <?php endforeach; ?>
+                                </select>
+                                </div>
+                                </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >Nama
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >ID Tim
                                     </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="nama" class="form-control col-md-7 col-xs-12">
-                                    </div>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="text" name="id_tim" class="form-control col-md-7 col-xs-12">
+                                </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >Web Code
+                                    </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="text" name="web_code" class="form-control col-md-7 col-xs-12">
+                                </div>
                                 </div>
                                 <div class="ln_solid"></div>
                                 <div class="form-group">
                                     <div class="col-md-6 col-sm-6 col-xs-12 col-md-offset-3">
-                                        <a class="btn btn-primary" href="<?php echo base_url('timwbs') ?>">Kembali</a>
+                                        <a class="btn btn-primary" href="<?php echo base_url('wbs/tim') ?>">Kembali</a>
                                         <button class="btn btn-primary" type="reset">Reset</button>
                                         <input type="submit" class="btn btn-success" name="submit" value="Simpan">
                                     </div>
                                 </div>
+                               </div>
                             </form>
                     </div>
                 </div>

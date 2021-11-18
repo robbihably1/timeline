@@ -4,12 +4,18 @@
             <h1><i class="fa fa-calendar"></i> Tim Kerja (WBS)</h1>
         </div>
     </div>
-    <?php if ($this->session->userdata('role') == 'superadmin') { ?>
-        <a href="<?php echo base_url() ?>timwbs/createtim" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Data Tim WBS</a>
-        <?php } 
+    <!-- <?php if ($this->session->userdata('role') == 'superadmin') { ?>
+        <a href="<?php echo base_url() ?>wbs/createtim?id=<?php echo $WbsList->WEB_CODE ?>" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Tim  WBS</a>
+    <?php } 
         else if ($this->session->userdata('role') == 'admin') { ?>
-            <a href="<?php echo base_url() ?>timwbs/createtim" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Data Tim WBS</a>
-            <?php } ?>  
+            <a href="<?php echo base_url() ?>wbs/createtim?id=<?php echo $WbsList->WEB_CODE ?>" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Tim WBS</a>
+    <?php } ?>   -->
+    <?php if ($this->session->userdata('role') == 'superadmin') { ?>
+        <a href="<?php echo base_url() ?>wbs/createtim" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Tim  WBS</a>
+    <?php } 
+        else if ($this->session->userdata('role') == 'admin') { ?>
+            <a href="<?php echo base_url() ?>wbs/createtim" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Tim WBS</a>
+    <?php } ?>  
     <div class="clearfix"></div>
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 ">
@@ -37,6 +43,8 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama </th>
+                                    <th>ID TIM </th>
+                                    <th>WEB CODE </th>
                                     <?php if ($this->session->userdata('role') == 'superadmin') : ?>
                                     <th>Action</th>
                                     <?php endif; ?>
@@ -47,7 +55,9 @@
                                 <?php foreach ($list as $TimWbsList) : ?>
                                     <tr>
                                     <td><?php echo $no ?></td>
-                                        <td><?php echo $TimWbsList->NAMA ?></td>
+                                        <td><?php echo $TimWbsList->FULL_NAME?></td>
+                                        <td><?php echo $TimWbsList->ID_TIM ?></td>
+                                        <td><?php echo $TimWbsList->WEB_CODE ?></td>
                                         <?php if ($this->session->userdata('role') == 'superadmin') : ?>
                                             <td width="11%">
                                                 <a href="<?php echo base_url() ?>timwbs/update?id=<?php echo $TimWbsList->ID_TIM ?>" class="btn btn-info btn-xs">
@@ -82,7 +92,7 @@
                 closeOnConfirm: false
             },
             function() {
-                window.location.href = "<?php echo base_url() ?>timwbs/delete?rcgn=<?php echo $TimWbsList->WEB_CODE?>";
+                window.location.href = "<?php echo base_url() ?>timwbs/delete?rcgn=<?php echo $TimWbsList->ID_TIM?>";
             });
     }
 </script>

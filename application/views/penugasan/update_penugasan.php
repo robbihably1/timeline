@@ -1,7 +1,7 @@
 <div class="">
     <div class="page-title" style="padding: 8px">
         <div class="title_left">
-            <h1><i class="fa fa-tasks"></i>  Update Penugasan</h1>
+            <h1><i class="fa fa-tasks"></i>  Edit Data Penugasan</h1>
         </div>
     </div>
     <div class="clearfix"></div>
@@ -103,7 +103,6 @@
                                     <form method="post" action="<?=base_url('tambahdokumen')?>"
                                     enctype="multipart/form-data">
                                     <input type="file" id="dokumen" name="dokumen" size="10000" value="<?php echo $detail->DOKUMEN ?>" class="form-control col-md-7 col-xs-12"  />
-                                    <!-- <input type="file" name="dokumen" class="form-control col-md-7 col-xs-12"> -->
                                 </div>
                             </div>
                                 <div class="ln_solid"></div>

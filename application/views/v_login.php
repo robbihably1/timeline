@@ -47,9 +47,11 @@
               <div>
                 <button type="submit" name="login" class="btn btn-primary btn-lg btn-block" value="Login">Login</button>
                 <!-- <input type="submit" name="login" class="btn btn-warning submit pull-right" value="Login" /> -->
-              </div>
-
+              </div> <br>
 	          </form>
+			  <div>
+				<a href="https://api.whatsapp.com/send?phone=085270047977" class="text-center mb-2">Lupa password? </a>
+			  </div>
 	        </div>
 				</div>
 			</div>

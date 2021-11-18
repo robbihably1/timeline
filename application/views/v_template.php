@@ -81,7 +81,7 @@
                     <!-- sidebar menu -->
                     <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                         <div class="menu_section">
-                            <h3>Data Master</h3>
+                            <!-- <h3>Data Master</h3> -->
                             <ul class="nav side-menu">
                                 <li>
                                     <a href="<?php echo base_url() ?>dashboard"><i class="fa fa-dashboard"></i> Dashboard</a>
@@ -98,7 +98,7 @@
                                     <a href="<?php echo base_url() ?>wbs"><i class="fa fa-calendar"></i> WBS</a>
 
                                 <li>
-                                    <a href="<?php echo base_url() ?>timesheet"><i class="fa fa fa-desktop"></i> Timesheet</a>
+                                    <a href="<?php echo base_url() ?>monitoring"><i class="fa fa fa-desktop"></i> Monitoring</a>
                                 </li>
                             </ul>
                         </div>

@@ -76,6 +76,7 @@ class Wbs extends CI_Controller
 	{
 		$data['title'] = 'Tambah Tim WBS';
 		$data['primary_view'] = 'wbs/create_timwbs';
+		$data['user'] = $this->User_model->getList();
 		$this->load->view('v_template', $data);
 	}
 
@@ -83,6 +84,7 @@ class Wbs extends CI_Controller
 	public function update()
 	{
 		$id = $this->input->get('id');
+		$data['penugasan'] = $this->Penugasan_model->getList();
 		//CHECK : Data Availability
 		if($this->Wbs_model->checkAvailability($id) == true){
 			$data['primary_view'] = 'wbs/update_wbs';
@@ -137,6 +139,7 @@ public function submits()
 		} 
 	}
 }
+//Controller WBS TIM
 	public function tim()
 	{
 		$data['title'] = 'Wbs';
@@ -144,6 +147,22 @@ public function submits()
 		$data['total'] = $this->Wbs_model->getCount();
 		$data['list'] = $this->Wbs_model->getTimList();
 		$this->load->view('v_template', $data);
+	}
+	public function submitim()
+	{
+		if ($this->input->post('submitim')) {
+			$this->form_validation->set_rules('nama', 'Nama', 'trim|required');
+			$this->form_validation->set_rules('id_tim', 'ID_TIM', 'trim|required');
+			$this->form_validation->set_rules('web_code', 'Web Code', 'trim|required');
+
+		if($this->Wbs_model->insert() == true){
+			$this->session->set_flashdata('announce', 'Berhasil menyimpan data');
+			redirect('wbs/tim');
+		}else{
+			$this->session->set_flashdata('announce', 'Gagal menyimpan data');
+			redirect('wbs/createtim');
+		}
+	}
 	}
 
 	public function delete()

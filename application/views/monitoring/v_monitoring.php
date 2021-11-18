@@ -1,22 +1,21 @@
 <div class="">
     <div class="page-title" style="padding: 8px">
         <div class="title_left">
-            <h1><i class="fa fa-calendar"></i> Timesheet</h1>
+            <h1><i class="fa fa-desktop"></i> Monitoring</h1>
         </div>
     </div>
     <?php if ($this->session->userdata('role') == 'superadmin') { ?>
-        <a href="<?php echo base_url() ?>timesheet/create" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Data WBS</a>
+        <a href="<?php echo base_url() ?>monitoring/create" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Monitoring</a>
         <?php } 
         else if ($this->session->userdata('role') == 'admin') { ?>
-            <a href="<?php echo base_url() ?>timesheet/create" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Data WBS</a>
+            <a href="<?php echo base_url() ?>monitoring/create" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Monitoring</a>
             <?php } ?>  
     <div class="clearfix"></div>
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 ">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>List Data <small>Timesheet</small></h2>
-                    <!-- <a href="<?php echo base_url() ?>wbs/panggil_fpdf" class="btn btn-success pull-right"><i class="fa fa-file"></i> PDF Data WBS</a> -->
+                    <h2>List Data <small>Monitoring</small></h2>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
@@ -40,9 +39,9 @@
                                     <th>Nama Pegawai </th>
                                     <th>Tanggal</th>
                                     <th>Nama Pekerjaan</th>
-                                    <th>Uraian Kegiatan</th>
+                                    <!-- <th>Uraian Kegiatan</th> -->
                                     <th>Durasi</th>
-                                    <th>Progress</th>
+                                    <th>Progres</th>
                                     <th>Catatan</th>
                                     <th>Kendala</th>
                                     <?php if ($this->session->userdata('role') == 'superadmin') : ?>
@@ -50,35 +49,42 @@
                                     <?php endif; ?>
                                 </tr>
                             </thead>
-                            <!-- <tbody> -->
-                                <?php //$no = 1; ?>
-                                <?php //foreach ($list as $WbsList) : ?>
-                                    <!-- <tr> -->
-                                    <!-- <td><?php //echo $no ?></td> -->
-                                        <!-- <td><?php //echo $WbsList->WEB_CODE ?></td> -->
-                                        <!-- <td><?php //echo $WbsList->PIC  ?></td>
-                                        <td><?php //echo $WbsList->TGL_AWAL  ?></td>
-                                        <td><?php //echo $WbsList->TGL_AKHIR ?></td>
-                                        <td><?php //echo $WbsList->DURASI	 ?></td>
-                                        <td><?php //echo $WbsList->NAMA_PEKERJAAN ?></td>
-                                        <td><?php //echo $WbsList->URAIAN_KEGIATAN ?></td> -->
-                                        <?php //if ($this->session->userdata('role') == 'superadmin') : ?>
-                                            <!-- <td width="10%"> -->
-                                                <!-- <button class="btn btn-warning btn-xs" onclick="sweets()">
-                                                    <i class="fa fa-user"></i>
-                                                </button>
-                                                <a href="<?php //echo base_url() ?>wbs/update?id=<?php //echo $WbsList->WEB_CODE ?>" class="btn btn-info btn-xs">
+                            <tbody>
+                                <?php $no = 1; ?>
+                                <?php foreach ($list as $monitoringList) : ?>
+                                    <tr>
+                                        <td><?php echo $no ?></td>
+                                        <td><?php echo $monitoringList->FULL_NAME  ?></td>
+                                        <td><?php echo $monitoringList->TANGGAL  ?></td>
+                                        <td><?php echo $monitoringList->NAMA_PEKERJAAN ?></td>
+                                        <!-- <td><?php echo $monitoringList->URAIAN_KEGIATAN ?></td> -->
+                                        <td><?php echo $monitoringList->DURASI ?></td>
+                                        <td><?php echo $monitoringList->PROGRES ?></td>
+                                        <td><?php echo $monitoringList->CATATAN ?></td>
+                                        <td><?php echo $monitoringList->KENDALA ?></td>
+                                        <?php if ($this->session->userdata('role') == 'superadmin') { ?>
+                                            <td width="6%">
+                                                <a href="<?php echo base_url() ?>monitoring/update?id=<?php echo $monitoringList->NO_MONITORING ?>" class="btn btn-info btn-xs">
                                                     <i class="fa fa-edit"></i>
                                                 </a>
                                                 <button class="btn btn-danger btn-xs" onclick="sweets()">
                                                     <i class="fa fa-trash"></i>
-                                                </button> -->
-                                            <!-- </td> -->
-                                        <?php //endif; ?>
-                                    <!-- </tr> -->
-                                    <?php //$no++; ?>
-                                <?php //endforeach; ?>
-                            <!-- </tbody> -->
+                                                </button>
+                                            </td>
+                                        <?php }else if ($this->session->userdata('role') == 'admin') { ?>
+                                            <td width="6%">
+                                                <a href="<?php echo base_url() ?>monitoring/update?id=<?php echo $monitoringList->NO_MONITORING ?>" class="btn btn-info btn-xs">
+                                                    <i class="fa fa-edit"></i>
+                                                </a>
+                                                <button class="btn btn-danger btn-xs" onclick="sweets()">
+                                                    <i class="fa fa-trash"></i>
+                                                </button>
+                                            </td>
+                                        <?php } ?>
+                                    </tr>
+                                    <?php $no++; ?>
+                                <?php endforeach; ?>
+                            </tbody>
                         </table>
                     <?php endif; ?>
                 </div>
@@ -99,7 +105,7 @@
                 closeOnConfirm: false
             },
             function() {
-                window.location.href = "<?php echo base_url() ?>wbs/delete?rcgn=<?php echo $WbsList->WEB_CODE?>";
+                window.location.href = "<?php echo base_url() ?>penugasan/delete?rcgn=<?php echo $monitoringList->ID_TUGAS ?>";
             });
     }
 </script>

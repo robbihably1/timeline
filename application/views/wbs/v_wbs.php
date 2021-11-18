@@ -42,7 +42,7 @@
                                     <th>PIC</th>
                                     <th>Tanggal Awal</th>
                                     <th>Tanggal Akhir</th>
-                                    <th>Durasi</th>
+                                    <th>Durasi (Jam)</th>
                                     <th>Nama Pekerjaan</th>
                                     <th>Uraian Kegiatan</th>
                                     <?php if ($this->session->userdata('role') == 'superadmin') : ?>

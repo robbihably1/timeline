@@ -81,10 +81,29 @@ class Wbs_model extends CI_Model
 			return false;
 		}
 	}
+
+	//Model WBS TIM
+	public function insertim(){
+		$data = array(
+			'FULL_NAME'		=> $this->input->post('full_name'),
+			'WEB_CODE'	=> $this->input->post('web_code'),
+			'ID_TIM'		=> $this->input->post('id_tim'),
+		);
+
+		$this->db->insert('wbs/tim', $data);
+		if ($this->db->affected_rows() > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	public function tim()
 	{
 		$data = array(
-			'NAMA'	=> $this->input->post('nama'),
+			'FULL_NAME'	=> $this->input->post('full_name'),
+			'ID_TIM'	=> $this->input->post('id_tim'),
+			// 'WEB_CODE'	=> $this->join->('wbs','wbs'.'web_code'= 'timwbs'.'web_code'),
+			'WEB_CODE'	=> $this->input->post('web_code'),
 		);
 
 		$this->db->insert('timwbs', $data);
