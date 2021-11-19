@@ -36,17 +36,14 @@
                                 </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >ID Tim
-                                    </label>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="id_tim" class="form-control col-md-7 col-xs-12">
-                                </div>
-                                </div>
-                                <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >Web Code
-                                    </label>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="web_code" class="form-control col-md-7 col-xs-12">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >Web Code</label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select name="web_code" class="form-control col-md-3 col-sm-3 col-xs-12">
+                                        <option value="" >Web Code</option>
+                                        <?php foreach ($webcode as $wcd) : ?>
+                                            <option value="<?php echo $wcd->WEB_CODE?>"><?php echo $wcd->WEB_CODE?></option>
+                                        <?php endforeach; ?>
+                                </select>
                                 </div>
                                 </div>
                                 <div class="ln_solid"></div>

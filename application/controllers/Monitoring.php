@@ -39,7 +39,7 @@ class Monitoring extends CI_Controller
 		if ($this->input->post('submit')) {
 			$this->form_validation->set_rules('tanggal', 'Tanggal', 'trim|required');
 			$this->form_validation->set_rules('nama_pekerjaan', 'Nama Pekerjaan', 'trim|required');
-			$this->form_validation->set_rules('uraian_kegiatan', 'Uraian Kegiatan', 'trim|required');
+			// $this->form_validation->set_rules('uraian_kegiatan', 'Uraian Kegiatan', 'trim|required');
 			$this->form_validation->set_rules('durasi', 'Durasi (Jam)', 'trim|required');
 			$this->form_validation->set_rules('progres', 'Progres (%)', 'trim|required|integer');
 			$this->form_validation->set_rules('catatan', 'Catatan', 'trim|required');
@@ -59,7 +59,7 @@ class Monitoring extends CI_Controller
 		if ($this->input->post('submit')) {
 			$this->form_validation->set_rules('tanggal', 'Tanggal', 'trim|required');
 			$this->form_validation->set_rules('nama_pekerjaan', 'Nama Pekerjaan', 'trim|required');
-			$this->form_validation->set_rules('uraian_kegiatan', 'Uraian Kegiatan', 'trim|required');
+			// $this->form_validation->set_rules('uraian_kegiatan', 'Uraian Kegiatan', 'trim|required');
 			$this->form_validation->set_rules('durasi', 'Durasi (Jam)', 'trim|required');
 			$this->form_validation->set_rules('progres', 'Progres (%)', 'trim|required|integer');
 			$this->form_validation->set_rules('catatan', 'Catatan', 'trim|required');
@@ -83,6 +83,7 @@ class Monitoring extends CI_Controller
 	{
 		
 		$id = $this->input->get('id');
+		$data['user'] = $this->User_model->getList();
 		$data['penugasan'] = $this->Penugasan_model->getList();
 		
 		//CHECK : Data Availability
@@ -91,7 +92,7 @@ class Monitoring extends CI_Controller
 		} else {
 			// $data['primary_view'] = '404_view';
 		}
-		$data['title'] = 'Updatemonitoring';
+		$data['title'] = 'Update Monitoring';
 		$data['detail'] = $this->Monitoring_model->getDetail($id);
 		$this->load->view('v_template', $data);
 	}

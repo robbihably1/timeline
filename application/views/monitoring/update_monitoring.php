@@ -32,18 +32,18 @@
                                 }
                             }
                         ?>
-                            <form method="post" action="<?php echo base_url() ?>monitoring/submits" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
-                                <input type="hidden" readonly name="id" value="<?php echo $detail->NO_MONITORING ?>">
-                                <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama Pegawai</label>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                <select name="full_name" class="form-control col-md-3 col-sm-3 col-xs-12">
-                                    <option value="" >Pilih Nama Pegawai</option>
-                                    <?php foreach ($user as $usr) : ?>
-                                        <option value="<?php echo $usr->FULLNAME?>"><?php echo $usr->FULLNAME?></option>
-                                    <?php endforeach; ?>
-                                </select>
-                                </div>
+                        <form method="post" action="<?php echo base_url() ?>monitoring/submits" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                            <input type="hidden" readonly name="id" value="<?php echo $detail->NO_MONITORING ?>">
+                            <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Nama Pegawai</label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                            <select name="full_name" class="form-control col-md-3 col-sm-3 col-xs-12">
+                                <option value="" >Pilih Nama Pegawai</option>
+                                <?php foreach ($user as $usr) : ?>
+                                    <option value="<?php echo $usr->FULLNAME?>"><?php echo $usr->FULLNAME?></option>
+                                <?php endforeach; ?>
+                            </select>
+                            </div>
                         </div>
                         <div class="form-group">
                                 <label class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal

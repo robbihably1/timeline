@@ -40,8 +40,8 @@
                                     <th>Tanggal</th>
                                     <th>Nama Pekerjaan</th>
                                     <!-- <th>Uraian Kegiatan</th> -->
-                                    <th>Durasi</th>
-                                    <th>Progres</th>
+                                    <th>Durasi (Jam)</th>
+                                    <th>Progres (%)</th>
                                     <th>Catatan</th>
                                     <th>Kendala</th>
                                     <?php if ($this->session->userdata('role') == 'superadmin') : ?>

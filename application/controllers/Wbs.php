@@ -77,6 +77,8 @@ class Wbs extends CI_Controller
 		$data['title'] = 'Tambah Tim WBS';
 		$data['primary_view'] = 'wbs/create_timwbs';
 		$data['user'] = $this->User_model->getList();
+		$data['wbs'] = $this->Wbs_model->getList();
+		
 		$this->load->view('v_template', $data);
 	}
 
@@ -152,7 +154,6 @@ public function submits()
 	{
 		if ($this->input->post('submitim')) {
 			$this->form_validation->set_rules('nama', 'Nama', 'trim|required');
-			$this->form_validation->set_rules('id_tim', 'ID_TIM', 'trim|required');
 			$this->form_validation->set_rules('web_code', 'Web Code', 'trim|required');
 
 		if($this->Wbs_model->insert() == true){

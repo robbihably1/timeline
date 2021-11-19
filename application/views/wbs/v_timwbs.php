@@ -43,7 +43,6 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Nama </th>
-                                    <th>ID TIM </th>
                                     <th>WEB CODE </th>
                                     <?php if ($this->session->userdata('role') == 'superadmin') : ?>
                                     <th>Action</th>
@@ -56,7 +55,6 @@
                                     <tr>
                                     <td><?php echo $no ?></td>
                                         <td><?php echo $TimWbsList->FULL_NAME?></td>
-                                        <td><?php echo $TimWbsList->ID_TIM ?></td>
                                         <td><?php echo $TimWbsList->WEB_CODE ?></td>
                                         <?php if ($this->session->userdata('role') == 'superadmin') : ?>
                                             <td width="11%">

@@ -36,7 +36,6 @@
                                     <div class="col-md-6 col-sm-6 col-xs-12">
                                     <select name="nama_pekerjaan" class="form-control col-md-3 col-sm-3 col-xs-12">
                                         <option value="" >Pilih Nama Pekerjaan</option>
-                                       
                                         <?php foreach ($penugasan as $pngsn) : ?>
                                             <option value="<?php echo $pngsn->NAMA_PEKERJAAN ?>"><?php echo $pngsn->NAMA_PEKERJAAN ?></option>
                                         <?php endforeach; ?>

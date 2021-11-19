@@ -63,25 +63,32 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >Pemberi Kerja
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Pemberi Kerja
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
                                     <select class="form-control" name="pemberi_kerja">
-                                            <option value="Dirut">Dirut</option>
-                                            <option value="Direksi">Direksi</option>
-                                            <option value="PLN Pusat">PLN Pusat</option>
-                                            <option value="Korporat/ Turunan Program Strategis">Korporat/ Turunan Program Strategis</option>
-                                            <option value="Pemegang Saham">Pemegang Saham</option>
-                                        </select>
-                                    </div>
+                                    <option value="" >Pilih Pemberi Kerja</option>
+                                        <option value="Dirut">Dirut</option>
+                                        <option value="Direksi">Direksi</option>
+                                        <option value="PLN Pusat">PLN Pusat</option>
+                                        <option value="Korporat/ Turunan Program Strategis">Korporat/ Turunan Program Strategis</option>
+                                        <option value="Pemegang Saham">Pemegang Saham</option>
+                                    </select>
                                 </div>
+                            </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >Kategori
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="kategori" value="<?php echo $detail->KATEGORI ?>" class="form-control col-md-7 col-xs-12">
-                                    </div>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Kategori
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select class="form-control" name="kategori">
+                                        <option value="" >Pilih Kategori</option>
+                                        <option value="PS">Program Strategis Diluar KPI</option>
+                                        <option value="KPI">KPI Korporat</option>
+                                        <option value="RUPS">Arahan RUPS</option>
+                                        <option value="SBU">Program Kerja Direktorat Divisi/SBU</option>
+                                    </select>
                                 </div>
+                            </div>
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" >PIC
                                     </label>

@@ -45,24 +45,24 @@
                         </thead>
                         <tbody>
                         <?php $no = 1; ?>
-                        <?php foreach ($list as $petugasList):?>
+                        <?php foreach ($list as $userList):?>
                             <?php
                                 $rl = null;
-                                if($petugasList->ROLE == 'superadmin'){$rl='Direktur';}
-                                if($petugasList->ROLE == 'admin'){$rl='Manajer';}
-                                if($petugasList->ROLE == 'lowadmin'){$rl='Karyawan';}
+                                if($userList->ROLE == 'superadmin'){$rl='Direktur';}
+                                if($userList->ROLE == 'admin'){$rl='Manajer';}
+                                if($userList->ROLE == 'lowadmin'){$rl='Karyawan';}
                                 // else{$rl='Direktur';}
                             ?>
                             <tr>
                                 <td><?php echo $no ?></td>
-                                <td><?php echo $petugasList->FULLNAME ?></td>
-                                <td><?php echo $petugasList->USERNAME ?></td>
-                                <td><?php echo $petugasList->PASSWORD ?></td>
+                                <td><?php echo $userList->FULLNAME ?></td>
+                                <td><?php echo $userList->USERNAME ?></td>
+                                <td><?php echo $userList->PASSWORD ?></td>
                                 <td><?php echo $rl ?></td>
-                                <td><?php echo $petugasList->LAST_LOGIN ?></td>
+                                <td><?php echo $userList->LAST_LOGIN ?></td>
                                 <?php if($this->session->userdata('role')=='superadmin'): ?>
                                 <td>
-                                    <a href="<?php echo base_url() ?>user/update?tken=<?php echo $petugasList->ID_ADMIN ?>" class="btn btn-info btn-xs">
+                                    <a href="<?php echo base_url() ?>user/update?tken=<?php echo $userList->ID_ADMIN ?>" class="btn btn-info btn-xs">
                                         <i class="fa fa-edit"> Edit</i>
                                     </a>
                                     <button class="btn btn-danger btn-xs" onclick="deleteUser()">
@@ -94,7 +94,7 @@ function deleteUser() {
         closeOnConfirm: false
     },
     function() {
-        window.location.href = "<?php echo base_url() ?>user/delete?rcgn=<?php echo $petugasList->ID_ADMIN ?>";
+        window.location.href = "<?php echo base_url() ?>user/delete?rcgn=<?php echo $userList->ID_ADMIN ?>";
     });
 }
 </script>
