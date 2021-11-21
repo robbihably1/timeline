@@ -39,7 +39,6 @@ class Monitoring extends CI_Controller
 		if ($this->input->post('submit')) {
 			$this->form_validation->set_rules('tanggal', 'Tanggal', 'trim|required');
 			$this->form_validation->set_rules('nama_pekerjaan', 'Nama Pekerjaan', 'trim|required');
-			// $this->form_validation->set_rules('uraian_kegiatan', 'Uraian Kegiatan', 'trim|required');
 			$this->form_validation->set_rules('durasi', 'Durasi (Jam)', 'trim|required');
 			$this->form_validation->set_rules('progres', 'Progres (%)', 'trim|required|integer');
 			$this->form_validation->set_rules('catatan', 'Catatan', 'trim|required');
@@ -59,7 +58,6 @@ class Monitoring extends CI_Controller
 		if ($this->input->post('submit')) {
 			$this->form_validation->set_rules('tanggal', 'Tanggal', 'trim|required');
 			$this->form_validation->set_rules('nama_pekerjaan', 'Nama Pekerjaan', 'trim|required');
-			// $this->form_validation->set_rules('uraian_kegiatan', 'Uraian Kegiatan', 'trim|required');
 			$this->form_validation->set_rules('durasi', 'Durasi (Jam)', 'trim|required');
 			$this->form_validation->set_rules('progres', 'Progres (%)', 'trim|required|integer');
 			$this->form_validation->set_rules('catatan', 'Catatan', 'trim|required');

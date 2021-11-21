@@ -48,7 +48,7 @@ class User extends CI_Controller {
 					if($this->User_model->usernameCheck($this->input->post('username')) == true){
 						if($this->User_model->insert() == true){
 							$this->session->set_flashdata('announce', 'Berhasil menyimpan data');
-							redirect('user/create');
+							redirect('user');
 						}else{
 							$this->session->set_flashdata('announce', 'Gagal menyimpan data');
 							redirect('user/create');

@@ -92,10 +92,10 @@
                                 </li>
                                 <?php endif; ?>
                                 <li>
-                                    <a href="<?php echo base_url() ?>penugasan"><i class="fa fa-tasks"></i> Data Penugasan</a>
+                                    <a href="<?php echo base_url() ?>penugasan"><i class="fa fa-tasks"></i> Program</a>
                                 </li>
                                 <li>
-                                    <a href="<?php echo base_url() ?>wbs"><i class="fa fa-calendar"></i> WBS</a>
+                                    <a href="<?php echo base_url() ?>wbs"><i class="fa fa-calendar"></i> Proyek</a>
 
                                 <li>
                                     <a href="<?php echo base_url() ?>monitoring"><i class="fa fa fa-desktop"></i> Monitoring</a>

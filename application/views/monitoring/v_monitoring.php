@@ -105,7 +105,7 @@
                 closeOnConfirm: false
             },
             function() {
-                window.location.href = "<?php echo base_url() ?>penugasan/delete?rcgn=<?php echo $monitoringList->ID_TUGAS ?>";
+                window.location.href = "<?php echo base_url() ?>monitoring/delete?rcgn=<?php echo $monitoringList->NO_MONITORING ?>";
             });
     }
 </script>

@@ -1,7 +1,7 @@
 <div class="">
     <div class="page-title" style="padding: 8px">
         <div class="title_left">
-            <h1><i class="fa fa-calendar"></i>  Edit Data WBS</h1>
+            <h1><i class="fa fa-calendar"></i>  Edit Proyek</h1>
         </div>
     </div>
     <div class="clearfix"></div>
@@ -9,7 +9,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Perbarui data WBS</h2>
+                    <h2>Perbarui Proyek</h2>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
@@ -34,13 +34,6 @@
                         ?>
                             <form method="post" action="<?php echo base_url() ?>wbs/submits" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left" autocomplete= "off" >
                                 <input type="hidden" name="id" value="<?php echo $detail->WEB_CODE ?>">
-                                <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >PIC
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="pic" id="pic" class="form-control col-md-7 col-xs-12" value="<?php echo $detail->PIC ?>">
-                                    </div>
-                                </div>
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" >Tanggal Awal
                                     </label>
@@ -73,6 +66,13 @@
                                         <?php endforeach; ?>
                                     
                                     </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >PIC
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="text" name="pic" id="pic" class="form-control col-md-7 col-xs-12" value="<?php echo $detail->PIC ?>">
                                     </div>
                                 </div>
                                 <div class="form-group">

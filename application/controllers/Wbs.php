@@ -102,11 +102,11 @@ class Wbs extends CI_Controller
 	{
 		if ($this->input->post('submit')) {
 			$this->form_validation->set_rules('web_code', 'Web Code', 'trim|required');
-			$this->form_validation->set_rules('pic', 'PIC', 'trim|required');
 			$this->form_validation->set_rules('tgl_awal', 'Tanggal Awal', 'trim|required');
 			$this->form_validation->set_rules('tgl_akhir', 'Tanggal Akhir', 'trim|required');
 			$this->form_validation->set_rules('durasi', 'durasi', 'trim|required|integer');
 			$this->form_validation->set_rules('nama_pekerjaan', 'Nama Pekerjaan', 'trim|required');
+			$this->form_validation->set_rules('pic', 'PIC', 'trim|required');
 			$this->form_validation->set_rules('uraian_kegiatan', 'Uraian Kegiatan', 'trim|required');
 		if($this->Wbs_model->insert() == true){
 			$this->session->set_flashdata('announce', 'Berhasil menyimpan data');
@@ -120,11 +120,11 @@ class Wbs extends CI_Controller
 public function submits()
 {
 	if ($this->input->post('submit')) {
-		$this->form_validation->set_rules('pic', 'PIC', 'trim|required');
 		$this->form_validation->set_rules('tgl_awal', 'Tanggal Awal', 'trim|required');
 		$this->form_validation->set_rules('tgl_akhir', 'Tanggal Akhir', 'trim|required');
 		$this->form_validation->set_rules('durasi', 'durasi', 'trim|required|integer');
 		$this->form_validation->set_rules('nama_pekerjaan', 'Nama Pekerjaan', 'trim|required');
+		$this->form_validation->set_rules('pic', 'PIC', 'trim|required');
 		$this->form_validation->set_rules('uraian_kegiatan', 'Uraian Kegiatan', 'trim|required');
 
 		if ($this->form_validation->run() == true) {

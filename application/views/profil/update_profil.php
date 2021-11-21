@@ -49,11 +49,15 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Jenis Kelamin
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="jk" value="<?php echo $det->JENKEL ?>" class="form-control col-md-7 col-xs-12">
-                                    </div>
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Jenis Kelamin
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select class="form-control" name="jk">
+                                        <option value="" >Pilih Jenis Kelamin</option>
+                                        <option value="L">Laki - Laki</option>
+                                        <option value="P">Perempuan</option>
+                                    </select>
+                                </div>
                                 </div>
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12">No. Telepon

@@ -1,21 +1,21 @@
 <div class="">
     <div class="page-title" style="padding: 8px">
         <div class="title_left">
-            <h1><i class="fa fa-tasks"></i> Data Penugasan</h1>
+            <h1><i class="fa fa-tasks"></i> Program</h1>
         </div>
     </div>
     <?php if ($this->session->userdata('role') == 'superadmin') { ?>
-        <a href="<?php echo base_url() ?>penugasan/create" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Data Penugasan</a>
+        <a href="<?php echo base_url() ?>penugasan/create" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Program</a>
         <?php } 
         else if ($this->session->userdata('role') == 'admin') { ?>
-            <a href="<?php echo base_url() ?>penugasan/create" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Data Penugasan</a>
+            <a href="<?php echo base_url() ?>penugasan/create" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Program</a>
             <?php } ?>    
     <div class="clearfix"></div>
     <div class="row">
         <div class="col-md-12 col-sm-12 col-xs-12 ">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>List Data <small>Penugasan</small></h2>
+                    <h2>List Data <small>Program</small></h2>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
@@ -41,9 +41,9 @@
                                     <th>Perihal</th>
                                     <th>Tgl Surat</th>
                                     <th>Nama Pekerjaan</th>
+                                    <th>Divisi</th>
                                     <th>Pemberi Kerja</th>
                                     <th>Kategori</th>
-                                    <th>PIC</th>
                                     <th>Target Selesai</th>
                                     <th>Dokumen</th>
 
@@ -64,11 +64,10 @@
                                         <td><?php echo $penugasanList->PERIHAL  ?></td>
                                         <td><?php echo $penugasanList->TGL_SURAT ?></td>
                                         <td><?php echo $penugasanList->NAMA_PEKERJAAN ?></td>
+                                        <td><?php echo $penugasanList->DIVISI?></td>
                                         <td><?php echo $penugasanList->PEMBERI_KERJA ?></td>
                                         <td><?php echo $penugasanList->KATEGORI ?></td>
-                                        <td><?php echo $penugasanList->PIC ?></td>
                                         <td><?php echo $penugasanList->TGL_SELESAI ?></td>
-                                        <!-- <td><a href="<?php echo base_url() ?>assets/doc/upload/<?php echo $penugasanList->DOKUMEN  ?>"><?php echo $penugasanList->DOKUMEN  ?></td> -->
                                         <td><a href="<?php echo base_url() ?>assets/doc/upload/<?php echo $penugasanList->DOKUMEN  ?>"><?php echo $penugasanList->DOKUMEN  ?></td>
                                         <?php if ($this->session->userdata('role') == 'superadmin') { ?>
                                             <td width="6%">

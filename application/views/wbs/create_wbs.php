@@ -1,7 +1,7 @@
 <div class="">
     <div class="page-title" style="padding: 8px">
         <div class="title_left">
-            <h1><i class="fa fa-calendar"></i>  Tambah WBS</h1>
+            <h1><i class="fa fa-calendar"></i>  Tambah Proyek</h1>
         </div>
     </div>
     <div class="clearfix"></div>
@@ -9,7 +9,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2>Masukkan data WBS</h2>
+                    <h2>Masukkan Proyek</h2>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
@@ -44,13 +44,6 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-md-3 col-sm-3 col-xs-12" >PIC
-                                    </label>
-                                    <div class="col-md-6 col-sm-6 col-xs-12">
-                                        <input type="text" name="pic" class="form-control col-md-7 col-xs-12">
-                                    </div>
-                                </div>
-                                <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" >Tanggal Awal
                                     </label>
                                     <div class="col-md-6 col-sm-6 col-xs-12">
@@ -71,6 +64,13 @@
                                         <input type="integer" name="durasi" id="durasi" class="form-control col-md-7 col-xs-12">
                                     </div>
                                 </div>
+                                <div class="form-group">
+                                    <label class="control-label col-md-3 col-sm-3 col-xs-12">PIC
+                                    </label>
+                                    <div class="col-md-6 col-sm-6 col-xs-12">
+                                        <input type="text" name="pic" class="form-control col-md-7 col-xs-12">
+                                    </div>
+                            </div>
                                 <div class="form-group">
                                     <label class="control-label col-md-3 col-sm-3 col-xs-12" >Uraian Kegiatan
                                     </label>    

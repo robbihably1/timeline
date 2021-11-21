@@ -50,7 +50,7 @@
               </div> <br>
 	          </form>
 			  <div>
-				<a href="https://api.whatsapp.com/send?phone=085270047977" class="text-center mb-2">Lupa password? </a>
+			  <a href="https://api.whatsapp.com/send?phone=+6285270047977&amp;text=Hallo admin, Saya lupa password" class="text-center mb-2">Lupa password? </a>
 			  </div>
 	        </div>
 				</div>

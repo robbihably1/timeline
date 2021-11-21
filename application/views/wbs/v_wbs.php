@@ -1,14 +1,14 @@
 <div class="">
     <div class="page-title" style="padding: 8px">
         <div class="title_left">
-            <h1><i class="fa fa-calendar"></i> Rencana Kerja (WBS)</h1>
+            <h1><i class="fa fa-calendar"></i> Proyek</h1>
         </div>
     </div>
     <?php if ($this->session->userdata('role') == 'superadmin') { ?>
-        <a href="<?php echo base_url() ?>wbs/create" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Data WBS</a>
+        <a href="<?php echo base_url() ?>wbs/create" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Proyek</a>
         <?php } 
         else if ($this->session->userdata('role') == 'admin') { ?>
-            <a href="<?php echo base_url() ?>wbs/create" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Data WBS</a>
+            <a href="<?php echo base_url() ?>wbs/create" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Tambah Proyek</a>
             <?php } ?>  
     <div class="clearfix"></div>
     <div class="row">
@@ -16,8 +16,8 @@
             <div class="x_panel">
                 <div class="x_title">
                     <h2>List Data <small>WBS</small></h2>
-                    <a href="<?php echo base_url() ?>wbs/panggil_fpdf" class="btn btn-danger pull-right"><i class="fa fa-file"></i> PDF Data WBS</a>
-                    <a href="<?php echo base_url() ?>wbs/panggil_excel" class="btn btn-success pull-right"><i class="fa fa-file"></i> Excel Data WBS</a>
+                    <a href="<?php echo base_url() ?>wbs/panggil_fpdf" class="btn btn-danger pull-right"><i class="fa fa-file"></i> PDF Proyek</a>
+                    <a href="<?php echo base_url() ?>wbs/panggil_excel" class="btn btn-success pull-right"><i class="fa fa-file"></i> Excel Proyek</a>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
@@ -38,12 +38,12 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
+                                    <th>Nama Pekerjaan</th>
                                     <th>WEB CODE </th>
-                                    <th>PIC</th>
                                     <th>Tanggal Awal</th>
                                     <th>Tanggal Akhir</th>
                                     <th>Durasi (Jam)</th>
-                                    <th>Nama Pekerjaan</th>
+                                    <th>PIC</th>
                                     <th>Uraian Kegiatan</th>
                                     <?php if ($this->session->userdata('role') == 'superadmin') : ?>
                                     <th>Action</th>
@@ -55,12 +55,12 @@
                                 <?php foreach ($list as $WbsList) : ?>
                                     <tr>
                                     <td><?php echo $no ?></td>
+                                        <td><?php echo $WbsList->NAMA_PEKERJAAN ?></td>
                                         <td><?php echo $WbsList->WEB_CODE ?></td>
-                                        <td><?php echo $WbsList->PIC  ?></td>
                                         <td><?php echo $WbsList->TGL_AWAL  ?></td>
                                         <td><?php echo $WbsList->TGL_AKHIR ?></td>
                                         <td><?php echo $WbsList->DURASI	 ?></td>
-                                        <td><?php echo $WbsList->NAMA_PEKERJAAN ?></td>
+                                        <td><?php echo $WbsList->PIC ?></td>
                                         <td><?php echo $WbsList->URAIAN_KEGIATAN ?></td>
                                         <?php if ($this->session->userdata('role') == 'superadmin') : ?>
                                             <td width="11%">

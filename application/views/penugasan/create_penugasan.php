@@ -1,7 +1,7 @@
 <div class="">
     <div class="page-title" style="padding: 8px">
         <div class="title_left">
-            <h1><i class="fa fa-tasks"></i> Tambah Penugasan    </h1>
+            <h1><i class="fa fa-tasks"></i> Tambah Program    </h1>
         </div>
     </div>
     <div class="clearfix"></div>
@@ -9,7 +9,7 @@
         <div class="col-md-12 col-sm-12 col-xs-12">
             <div class="x_panel">
                 <div class="x_title">
-                    <h2> Masukkan Data Penugasan</h2>
+                    <h2> Masukkan Program</h2>
                     <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
@@ -38,6 +38,19 @@
                                 </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                     <input type="text" name="id_tugas" class="form-control col-md-7 col-xs-12">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Divisi
+                                </label>
+                                <div class="col-md-6 col-sm-6 col-xs-12">
+                                    <select class="form-control" name="divisi">
+                                        <option value="Divisi Lapangan" >Divisi Lapangan</option>
+                                        <option value="Divisi Kelistrikan">Divisi Kelistrikan</option>
+                                        <option value="Divisi Jaringan">Divisi Jaringan</option>
+                                        <option value="Divisi Web">Divisi Web</option>
+                                        <option value="Divisi Intern ">Divisi Intern </option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -93,13 +106,6 @@
                                         <option value="RUPS">Arahan RUPS</option>
                                         <option value="SBU">Program Kerja Direktorat Divisi/SBU</option>
                                     </select>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">PIC
-                                </label>
-                                <div class="col-md-6 col-sm-6 col-xs-12">
-                                    <input type="text" name="pic" class="form-control col-md-7 col-xs-12">
                                 </div>
                             </div>
                             <div class="form-group">
